@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Weather Report</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="hero">
+      <h1>Weather Report</h1>
+      <p class="subtitle">Get Your Local Weather</p>
+
+      <form id="searchForm" class="search" autocomplete="off">
+        <label for="cityInput" class="sr-only">Enter city or ZIP</label>
+        <input id="cityInput" type="text" placeholder="e.g., London, New York, 10001" />
+        <button type="submit" id="submitBtn">Submit</button>
+      </form>
+    </header>
+
+    <section class="card" id="weatherCard" aria-live="polite">
+      <div class="card-header">
+        <h2 id="location">Current Weather</h2>
+        <div class="date" id="date">—</div>
+      </div>
+
+      <div class="main-row">
+        <div class="icon" id="weatherIcon">☀️</div>
+        <div class="temp-block">
+          <div class="temp" id="temperature">--°C</div>
+          <div class="cond" id="condition">—</div>
+        </div>
+      </div>
+
+      <div class="details">
+        <div class="detail"><strong>Humidity:</strong> <span id="humidity">—</span></div>
+        <div class="detail"><strong>Wind:</strong> <span id="wind">—</span></div>
+        <div class="detail"><strong>Rainfall:</strong> <span id="rain">—</span></div>
+        <div class="detail"><strong>UV Index:</strong> <span id="uv">—</span></div>
+        <div class="detail"><strong>Sunrise:</strong> <span id="sunrise">—</span></div>
+        <div class="detail"><strong>Sunset:</strong> <span id="sunset">—</span></div>
+      </div>
+    </section>
+
+    <footer class="note">
+      Tip: Try "London", "New York", "Mumbai", or "Delhi". Any other city will show a sample result.
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
